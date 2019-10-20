@@ -33,5 +33,18 @@ export const initialState = [
 ]
 
 export function reducer(state, action) {
-  return state 
+  switch (action.type) {
+    case "ADD_NEW_TASK":
+      const newItem = {
+        item: action.payload,
+        completed: false,
+        id: Date.now()
+      }
+      return [
+        newItem, ...state
+      ]
+      default: 
+        return state;
+  } 
+  
 }
