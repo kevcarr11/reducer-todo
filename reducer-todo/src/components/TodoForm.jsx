@@ -14,6 +14,12 @@ function TodoForm(props) {
     newTask('')
   }
 
+  const handleCompleted = e => {
+    e.preventDefault();
+    props.dispatch({ type: "CLEAR_COMPLETED" })
+
+}
+
 
   return (
     <div>
@@ -23,6 +29,10 @@ function TodoForm(props) {
         value={task}
         onChange={handleChange}
         />
+        <button>Add Task</button>
+      </form>
+      <form>
+      <button onClick={handleCompleted}>Clear Completed</button>
       </form>
     </div>
   )
