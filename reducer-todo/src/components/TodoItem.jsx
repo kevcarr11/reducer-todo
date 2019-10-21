@@ -1,7 +1,6 @@
 import React from 'react'
 
 function TodoItem(props) {
-console.log(props.todoItem)
   const handleToggle = (e) => {
     e.preventDefault();
     props.dispatch({ type: "TOGGLE_ITEM", payload: props.itemId })
