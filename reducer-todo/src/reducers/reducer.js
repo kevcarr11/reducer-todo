@@ -40,11 +40,20 @@ export function reducer(state, action) {
         completed: false,
         id: Date.now()
       }
-      return [
-        newItem, ...state
-      ]
-      default: 
-        return state;
+        return [
+          newItem, ...state
+        ]
+    case "TOGGLE_ITEM": 
+      return state.map((item) => 
+        item.id === action.payload 
+        ? {
+          ...item, 
+          completed: !item.completed
+         }
+         : item
+      )
+    default: 
+      return state;
   } 
   
 }

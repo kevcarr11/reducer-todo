@@ -20,3 +20,13 @@
 .App-link {
   color: #09d3ac;
 }
+
+.task.completed {
+  text-decoration: line-through;
+}
+
+.task{
+  cursor: pointer;
+  display: flex;
+  flex-flow: column wrap;
+}
