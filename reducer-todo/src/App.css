@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -17,16 +13,11 @@
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
-}
-
 .task.completed {
   text-decoration: line-through;
 }
 
 .task{
   cursor: pointer;
-  display: flex;
-  flex-flow: column wrap;
 }
+

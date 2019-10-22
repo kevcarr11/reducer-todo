@@ -4,7 +4,7 @@ import TodoItem from './TodoItem'
 function TodoList(props) {
 
   return (
-    <div>
+    <div >
       {props.state.map((item, index) => (
         <TodoItem 
           key={index}
